@@ -230,6 +230,7 @@ h1 {
   .about p {
     text-align: justify;
     width: 100%;
+    font-size: 1em;
   }
 
   .project {
@@ -249,5 +250,9 @@ h1 {
     width: 1.5em;
     height: 1.5em;
     margin: 0.5em;
+  }
+
+  main img {
+    transform: translate(-50%, 22.5em);
   }
 }
