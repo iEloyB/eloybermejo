@@ -124,7 +124,7 @@ h1 {
 .about h1,
 .projects h1 {
   text-align: center;
-  font-size: 6em;
+  font-size: 3em;
   font-weight: bold;
   animation: none;
 }
@@ -233,10 +233,21 @@ h1 {
   }
 
   .project {
-    width: 100%;
+    width: 80%;
+  }
+
+  .project h2 {
+    font-size: 0.9em;
   }
 
   .project p {
     text-align: justify;
+    font-size: 0.7em;
+  }
+
+  .project a {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.5em;
   }
 }
