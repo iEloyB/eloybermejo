@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+* {
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30em);
+  z-index: 2;
+
+  width: 4em;
+  height: 4em;
+  padding: 1em;
+
+  animation: fadeIn 15s ease;
+}
+
+.sphere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: rgb(240, 240, 240);
+  font-size: 7em;
+  z-index: 2;
+  text-align: center;
+  width: fit-content;
+
+  animation: fadeIn2 2s ease;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(154, 154, 154);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.about,
+.projects {
+  width: 100vw;
+  transition: 1s;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+  margin-top: 5em;
+  text-align: center;
+}
+
+.projects {
+  margin-top: 2em;
+}
+
+.aboutContent,
+.projectsContent {
+  margin-left: 3em;
+  margin-right: 3em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h1,
+.projects h1 {
+  text-align: center;
+  font-size: 6em;
+  font-weight: bold;
+  animation: none;
+}
+
+.about p {
+  width: 70%;
+  color: rgb(182, 182, 182);
+  font-size: 2em;
+}
+
+.about.showing {
+  opacity: 1;
+}
+
+.projectsContainer {
+  width: 100%;
+  margin-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10em;
+}
+
+.project {
+  position: relative;
+  width: 30%;
+  height: 15em;
+  border: dotted rgb(226, 226, 226) 0.15em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project h2 {
+  padding: 1em;
+  text-align: center;
+  width: fit-content;
+
+  color: rgb(225, 225, 225);
+  border-bottom: yellow solid 0.1em;
+}
+
+.project p {
+  color: rgb(182, 182, 182);
+  padding: 1em;
+}
+
+.project a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 50%;
+  border: dotted rgb(32, 188, 255) 0.2em;
+}
+
+.project a:hover {
+  cursor: none;
+}
+
+.styledText1 {
+  border-bottom: rgb(255, 136, 0) solid 0.05em;
+}
+
+.styledText2 {
+  border-bottom: rgb(0, 255, 106) solid 0.05em;
+}
+
+.styledText3 {
+  border-bottom: yellow solid 0.05em;
+}
+
+.pixelated {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+}
+
+.linkElemnent {
+  background-image: url("/link.svg");
+  background-size: 50%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1300px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .projects {
+    justify-content: center;
+  }
+
+  .about h1,
+  .projects h1 {
+    text-align: center;
+  }
+
+  .about p {
+    text-align: justify;
+    width: 100%;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .project p {
+    text-align: justify;
+  }
+}

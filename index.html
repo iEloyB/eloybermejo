@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello, world!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eloy Bermejo</title>
+  </head>
+  <body>
+    <main>
+      <h1 data-value="Eloy Bermejo">Eloy Bermejo</h1>
+      <img src="/scroll-down.gif" alt="Scroll down gif" />
+      <canvas class="sphere"></canvas>
+    </main>
+    <section class="about">
+      <div class="aboutContent">
+        <h1 data-value="About">About</h1>
+        <p>
+          I consider myself an <strong class="styledText1">analytical</strong>,
+          <strong class="styledText2">resourceful</strong>, and
+          <strong class="styledText3">proactive</strong> person with a strong
+          desire to learn and a passion for computer science, especially in the
+          field of programming. I enjoy working on personal projects, making
+          <strong class="pixelated">pixel art</strong> and discovering linux.
+        </p>
+      </div>
+    </section>
+    <hr />
+
+    <section class="projects">
+      <div class="projectsContent">
+        <h1 data-value="Projects">Projects</h1>
+        <div class="projectsContainer">
+          <div class="project">
+            <h2>The n queens</h2>
+            <p>
+              I solved the N-Queens problem in JavaScript, learning recursion,
+              which involves placing N queens on an N×N chessboard without
+              threatening each other.
+            </p>
+            <a href="#"></a>
+          </div>
+          <div class="project">
+            <h2>Minecraft FNAF Plugin</h2>
+            <p>
+              I developed a Minecraft plugin using Java and MySQL managing Five
+              Nights at Freddy's-style games. It featured diverse character
+              abilities, simultaneous arenas, and more.
+            </p>
+            <a href="#"></a>
+          </div>
+          <div class="project">
+            <h2>Chips Combo!</h2>
+            <p>
+              I developed Chips Combo!, a web game using PHP, SQL for real-time
+              data handling, controlling games and updating data dynamically.
+            </p>
+            <a href="#"></a>
+          </div>
+          <div class="project">
+            <h2>DuoQ Challenge</h2>
+            <p>
+              I created a React-based website for a League of Legends tournament
+              involving 50+ streamers like Welyb and ElXokas. The site displayed
+              real-time rankings and tournament information.
+            </p>
+            <a target="_blank" href="https://duoqchallenge.com/"></a>
+          </div>
+          <div class="project">
+            <h2>League Data</h2>
+            <p>
+              I built a React site displaying champion skins, learning CSS
+              animations along the way for added flair and interactivity.
+            </p>
+            <a target="_blank" href="https://league-data.vercel.app/"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+    <script src="./js/cursorhandler.js"></script>
+  </body>
 </html>
