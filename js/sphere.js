@@ -39,12 +39,11 @@ export function animate() {
   const lightZ = Math.sin(lightAngle) * lightDistance;
   light.position.set(lightX, 1, lightZ);
 
-  lightAngle += 0.003;
+  //lightAngle += 0.003;
 
   renderer.render(scene, camera);
 }
 
-// Ajustar el tamaño del canvas cuando cambie el tamaño de la ventana
 function onWindowResize() {
   camera.aspect = canvas.clientWidth / canvas.clientHeight;
   camera.updateProjectionMatrix();
@@ -52,3 +51,22 @@ function onWindowResize() {
 }
 
 window.addEventListener("resize", onWindowResize);
+
+let scrollY = window.scrollY;
+
+function onScroll() {
+  const newScrollY = window.scrollY;
+  const deltaScroll = newScrollY - scrollY;
+
+  lightAngle += deltaScroll * 0.0015;
+
+  if (lightAngle > Math.PI * 2) {
+    lightAngle -= Math.PI * 2;
+  } else if (lightAngle < 0) {
+    lightAngle += Math.PI * 2;
+  }
+
+  scrollY = newScrollY;
+}
+
+window.addEventListener("scroll", onScroll);
