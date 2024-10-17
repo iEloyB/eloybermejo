@@ -167,6 +167,24 @@ h1 {
   align-items: center;
 }
 
+.tecnologies {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  width: 30%;
+  height: 2em;
+
+  display: flex;
+  gap: 0.5em;
+  justify-content: left;
+  align-items: center;
+}
+
+.tecnologies img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .project h2 {
   padding: 1em;
   text-align: center;
